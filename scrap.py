@@ -49,6 +49,8 @@ class Scrapper:
                 
             if '...' in pages_text:
                 pages_text = pages_text.split('...')[-1]
+            else:
+                pages_text = pages_text[-1]
             
             try:
                 pages = int(pages_text)
