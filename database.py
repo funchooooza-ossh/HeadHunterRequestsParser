@@ -1,3 +1,4 @@
+#code by funchooooza-ossh Good luck ;)
 from pathlib import Path
 import psycopg2
 import os
