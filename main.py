@@ -51,8 +51,6 @@ def main():
     print (f'Vacancies catched:{count} vacancies')
 
     pages = Scrapper.page_count(soup)
-    if pages*20>count:
-        pages = 1
     print(f'Total pages: {pages}')
 
     urls = Scrapper.url_list(url,pages)
