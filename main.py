@@ -1,3 +1,4 @@
+#code by funchooooza-ossh Good luck ;)
 import requests
 import fake_useragent
 import random
