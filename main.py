@@ -39,6 +39,10 @@ def main():
         url = url.replace('items_on_page=100','items_on_page=20')
     elif url.find('items_on_page=50')!= -1:
         url = url.replace('items_on_page=50','items_on_page=20')
+    elif url.find('items_on_page=') == -1:
+        url=url+'&items_on_page=20'
+        
+        
 
     rs = session.get(url, headers=headers,proxies=proxies).text
 
