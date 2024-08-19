@@ -3,9 +3,9 @@ import requests
 import fake_useragent
 import random
 import os
+import re
 from dotenv import load_dotenv
 from pathlib import Path
-from lxml import etree
 from bs4 import BeautifulSoup as bs
 from scrap import Scrapper
 from multiprocessing.pool import Pool
@@ -47,9 +47,9 @@ def main():
     rs = session.get(url, headers=headers,proxies=proxies).text
 
     soup = bs(rs,'html.parser')
-    dom = etree.HTML(str(soup))
-    count_xpath = './/h1'
-    count = dom.xpath(count_xpath)[0].text
+    count = soup.find('h1').text
+    count=re.split(r'[в]',count)[0]
+    if 'Найден' in count: count = re.split(r'\w{7}',count)[1]
     count = ''.join(count.split())
     count  = int(count)
     print (f'Vacancies catched:{count} vacancies')
