@@ -1,0 +1,2 @@
+Hello there, there is a requests version of HeadHunterParser. It works faster, than selenium-based version. But imho selenium version is more quality-oriented, because hh.ru will sent you a lot of the same vacancies with different urls. IDK why,
+selenium version had no probles with that. Anyway, both of them, can't parse custom layouts, cause I don't see any point in this. Custom vacancy page one in a thousand. Feel free to modify my code for your own needs. Have a nice day!
